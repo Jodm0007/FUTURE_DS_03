@@ -4,7 +4,7 @@ import logging
 from numpy import nan
 import pandas as pd 
 import numpy as np 
-from pashlib import Path 
+from pathlib import Path 
 import logging
 
 logger = logging.getLogger(__name__)

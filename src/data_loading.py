@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 def load_data(file_path: str) -> pd.DataFrame:
     """ Load data from CSV file """
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path, sep=';')
         logger.info(f"|==> Data loaded successfully from {file_path}")
         return df
     except FileNotFoundError:
@@ -25,4 +25,3 @@ def load_excel_data(file_path: str) -> pd.DataFrame:
     except FileNotFoundError:
         logger.error(f"|==> File not found: {file_path}")
         return None
- 

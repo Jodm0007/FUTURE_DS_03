@@ -2,16 +2,19 @@
 
 from pathlib import Path
 import logging
+import sys
 
 def setup_logger(log_file: str = None):
     """ logger Configuration """
+    handlers = [logging.StreamHandler(sys.stdout)] # Force l'envoi sur la sortie standard (fond blanc)
+    if log_file:
+        handlers.append(logging.FileHandler(log_file))
+        
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.StreamHandler(),
-            logging.FileHandler(log_file) if log_file else None
-        ]
+        handlers=handlers,
+        force=True # Force la réinitialisation du logger dans Jupyter
     )
     return logging.getLogger(__name__)
 
