@@ -25,3 +25,4 @@ def load_excel_data(file_path: str) -> pd.DataFrame:
     except FileNotFoundError:
         logger.error(f"|==> File not found: {file_path}")
         return None
+ 
