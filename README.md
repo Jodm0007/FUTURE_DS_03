@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bank Marketing Funnel Analysis Project
 
 ## Project Structure
@@ -55,3 +56,7 @@ FUTURE_DS_03/
 
 ## 👤 Auteur
 Joseph DATE-MASSE - Intern Data Science & Analytics @ Future Interns
+=======
+# FUTURE_DS_03
+Takes 3_ Future Interns Data Science Internship!
+>>>>>>> 1d244946544e6bb8825902155d8dcc30e9cfaab4
