@@ -1,0 +1,16 @@
+# Environnements virtuels
+.venv/
+F_DS_03_env/
+
+# Données
+data/
+
+# Fichiers temporaires Python
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+
+# Fichiers IDE/Editor
+.vscode/
+.idea/
+*.swp
