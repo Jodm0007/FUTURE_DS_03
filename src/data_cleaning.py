@@ -60,7 +60,7 @@ def add_funnel_stage(df: pd.DataFrame) -> pd.DataFrame:
     df['funnel_stage'] = pd.cut(
         df['duration'],
         bins=[-1, 0, 60, 180, np.inf],
-        labels=['No_Contact', 'Brief_Contaact', 'Engaged', 'Highly_Engaged']
+        labels=['No_Contact', 'Brief_Contact', 'Engaged', 'Highly_Engaged']
     )
     return df
 

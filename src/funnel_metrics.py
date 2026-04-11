@@ -6,42 +6,19 @@ from typing import Dict, List, Optional
 
 
 def calculate_funnel_metrics(df: pd.DataFrame, stages: Dict[str, int]) -> Dict[str, float]:
-    """
-    Calculer des KPIs essentiels du funnel
-    
-        Args:
-        df: DataFrame nettoyé (utilisé pour avg_duration, conversion_by_interest)
-        stages: Dictionnaire {nom_etape: count}
-
-    Returns:
-        Dict avec métriques calculées
-    """
-    
     total = stages.get('Impressions', 0)
     contacted = stages.get('Contacted', 0)
     engaged = stages.get('Engaged', 0)
     converted = stages.get('Converted', 0)
-
+    
     metrics = {
-
-        #Global conversion rate
         'contact_rate': (contacted / total) * 100 if total > 0 else 0,
         'engagement_rate': (engaged / total) * 100 if total > 0 else 0,
         'conversion_rate': (converted / total) * 100 if total > 0 else 0,
-
-        #Funnel drop-offs (taux de chute entre etapes)
-        'contact_to_engaged_dropoff': (
-            (1 - (engaged / contacted)) * 100 if contacted > 0 else 0
-        ),
-        'engaged_to_converted_dropoff': (
-            (1 - (converted / engaged)) * 100 if engaged > 0 else 0
-        ),
-        
-        #Business metrics
+        'contact_to_engaged_dropoff': ((contacted - engaged) / contacted) * 100 if contacted > 0 else 0,
+        'engaged_to_converted_dropoff': ((engaged - converted) / engaged) * 100 if engaged > 0 else 0,
         'avg_duration_sec': round(df['duration'].mean(), 2),
-        'conversion_by_interest_pct': round(
-            df[df['showed_interest'] == 1]['converted'].mean() * 100, 2
-        ) if len(df[df['showed_interest'] == 1]) > 0 else 0,
+        'conversion_by_interest_pct': round(df[df['showed_interest'] == 1]['converted'].mean() * 100, 2)
     }
     return metrics
 

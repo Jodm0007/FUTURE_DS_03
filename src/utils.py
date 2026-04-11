@@ -8,7 +8,7 @@ def setup_logger(log_file: str = None):
     """ logger Configuration """
     handlers = [logging.StreamHandler(sys.stdout)] # Force l'envoi sur la sortie standard (fond blanc)
     if log_file:
-        handlers.append(logging.FileHandler(log_file))
+        handlers.append(logging.FileHandler(log_file, encoding='utf-8'))
         
     logging.basicConfig(
         level=logging.INFO,

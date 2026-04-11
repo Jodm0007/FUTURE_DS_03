@@ -1,0 +1,7 @@
+2026-04-11 00:31:05,305 - ERROR - |==> File not found: ../data/processed/bank-marketing-cleaned.csv
+2026-04-11 00:31:21,836 - INFO - |==> Data loaded successfully from e:\Certifs\Future_Interns\FUTURE_DS_03\data\processed\bank-marketing_cleaned.csv
+2026-04-11 00:36:41,935 - INFO - |==> Data loaded successfully from e:\Certifs\Future_Interns\FUTURE_DS_03\data\processed\bank-marketing_cleaned.csv
+2026-04-11 10:40:20,179 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-04-11 10:40:20,188 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-04-11 10:45:23,569 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-04-11 10:45:23,577 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from typing import Dict, Optional, List
+from funnel_metrics import calculate_conversion_by_dimension
 
 # Style professionnel
 plt.style.use('seaborn-v0_8-whitegrid')
@@ -74,7 +75,7 @@ def plot_conversion_by_dimension(
         save_path: Chemin pour sauvegarder l'image
     """
     from funnel_metrics import calculate_conversion_by_dimension
-    
+
     conv_df = calculate_conversion_by_dimension(df, dimension, top_n)
     
     fig, ax = plt.subplots(figsize=(12, max(6, top_n * 0.4)))

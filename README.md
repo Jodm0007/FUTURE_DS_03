@@ -23,8 +23,8 @@ FUTURE_DS_03/
 │   ├── funnel_analysis_report.md
 │   └── images/                  # Generated charts and funnel diagrams
 │
-├── tableau/                     # Tableau/Power BI dashboards
-│   └── funnel_dashboard.twbx
+├── tableau/                     # Dashboards
+│   └── funnel_dashboard.md
 │
 ├── src/                         # Reusable Python scripts
 │   ├── data_cleaning.py
